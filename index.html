@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Data App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="app.js" defer></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <div class="max-w-4xl mx-auto mt-10 p-6 bg-white shadow-xl rounded-2xl">
+    <h1 class="text-3xl font-bold text-center text-blue-600 mb-8">🚗 Car Data Management</h1>
+
+    <div class="grid md:grid-cols-2 gap-4 mb-6">
+      <input id="carName" type="text" placeholder="Car Name" class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
+      <input id="carModel" type="text" placeholder="Model" class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
+      <input id="carYear" type="number" placeholder="Year" class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
+      <input id="carPrice" type="number" placeholder="Price" class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
+    </div>
+
+    <div class="flex justify-center gap-4 mb-8">
+      <button id="addBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow-md transition-all">Add Data</button>
+      <button id="showBtn" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg shadow-md transition-all">Show All Data</button>
+    </div>
+
+    <div id="carData" class="overflow-x-auto">
+      <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+        <thead class="bg-blue-500 text-white">
+          <tr>
+            <th class="py-3 px-4 text-left">Car Name</th>
+            <th class="py-3 px-4 text-left">Model</th>
+            <th class="py-3 px-4 text-left">Year</th>
+            <th class="py-3 px-4 text-left">Price</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody" class="text-gray-700"></tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>
